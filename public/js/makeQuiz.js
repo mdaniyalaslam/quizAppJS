@@ -19,37 +19,64 @@ var option2 = document.getElementById('option2');
 var option3 = document.getElementById('option3');
 var option4 = document.getElementById('option4');
 var marks = document.getElementById('marks');
+var selectedAns;
 // console.log(quizTempData)
+var selector = document.getElementById("select")
 
+function valid(){
+    if(
+        (!(question.value === '')) && 
+        (!(option1.value === '')) && 
+        (!(option2.value === '')) && 
+        (!(option3.value === '')) && 
+        (!(option4.value === '')) && 
+        (!(marks.value === ''))
+    ){
+        return true
+    }
+    else {return false}
+}
+function valid1(){
+    var selectedValue = selector[selector.selectedIndex].value;
+    
+    if (selectedValue == 1) {
+        return selectedAns = '1'
+    }
+    else if (selectedValue == 2) {
+        return selectedAns = '2'
+    }
+    else if (selectedValue == 3) {
+        return selectedAns = '3'
+    }
+    else if (selectedValue == 4) {
+        return selectedAns = '4'
+    }
+
+    else{
+        event.preventDefault()
+        // alert("Please Select Right answer")
+        return false
+    } 
+}
 
 
 function addMore() {
+    var check = valid()
+    var check1 = valid1()
+
     var selectedId = document.getElementById("selectedId");
-    var selector = document.getElementById("select")
-    var selectedValue = selector[selector.selectedIndex].value;
 
     var quizTempData = localStorage.getItem("quizTempData")
     quizTempData = JSON.parse(quizTempData)
 
-    if (quizTempData !== null) {
+    if(check && check1){
+        if (quizTempData !== null) {
 
-        if (selectedValue == 1) {
-            var selectedAns = '1'
-        }
-        else if (selectedValue == 2) {
-            var selectedAns = '2'
-        }
-        else if (selectedValue == 3) {
-            var selectedAns = '3'
-        }
-        else if (selectedValue == 4) {
-            var selectedAns = '4'
-        }
+   
 
-        else{
-            event.preventDefault()
-            alert("Please Select Right answer")
-        } 
+
+
+      
             
         var addQuestions = {
             question: question.value,
@@ -72,8 +99,8 @@ function addMore() {
         // console.log(addQuestions)
 
         
+        console.log("after add", addQuestions)
         quizTempData.push(addQuestions)
-        console.log("after add", quizTempData)
         localStorage.setItem("quizTempData", JSON.stringify(quizTempData));
         qCounter++
     }
@@ -81,6 +108,10 @@ function addMore() {
         alert("Add instructioins first!")
         location = "quizDetails.html"
     }
+}
+else {
+    alert('You missed some fields!')
+}
 }
 
 
