@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Quizone</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" type="" href="BOOTSTRAP/lib/boot.css">
+  <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" 
+    integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">-->
+  <link rel="stylesheet" type="" href="BOOTSTRAP/lib/sign-in.css">
+
+  <script src="https://www.gstatic.com/firebasejs/4.5.2/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyBFuJjAovnV3Tm5uTwUDAwnd9ZH7RkO5mY",
+      authDomain: "saylani-firebase.firebaseapp.com",
+      databaseURL: "https://saylani-firebase.firebaseio.com",
+      projectId: "saylani-firebase",
+      storageBucket: "saylani-firebase.appspot.com",
+      messagingSenderId: "997850868113"
+    };
+    firebase.initializeApp(config);
+  </script>
+</head>
+
+<body>
+
+  <div class="row" id="header">
+    <div id="logo" class="col-sm-4">
+      <h1>Quizone</h1>
+    </div>
+
+    <div class="col-sm-4"></div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-4"></div>
+    <div class="col-sm-4 field-set container form-signin">
+      <img class="s-heading login-img" src="img/login.png" alt="">
+
+
+      <h2 class="form-signin-heading s-heading">Please signUp Here</h2>
+
+      <label for="inputFirstName" class="sr-only">First Name</label>
+      <input type="text" id="teacherFirstName" class="form-control" placeholder="First Name" required autofocus>
+
+      <label for="inputLastName" class="sr-only">Last Name</label>
+      <input type="text" id="teacherLastName" class="form-control" placeholder="Last Name" required autofocus>
+
+      <label for="inputEmail" class="sr-only">Email address</label>
+      <input type="email" id="teacherEmail" class="form-control" placeholder="Email address" required autofocus>
+
+      <label for="inputPassword" class="sr-only">Password</label>
+      <input type="password" id="teacherPass" class="form-control" placeholder="Password" required>
+
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" value="remember-me"> Remember me
+        </label>
+      </div>
+     
+      <button class="background btn-background btn btn-lg btn-primary btn-block" onclick="signup()" type="submit">Sign up</button>
+
+    </div>
+    <div class="col-sm-4"></div>
+
+  </div>
+
+
+
+
+
+</body>
+<script src="js/teachersSignup.js"></script>
+<script src="BOOTSTRAP/lib/jquery.js"></script>
+<script src="BOOTSTRAP/lib/cloudflare.js"></script>
+<script src="BOOTSTRAP/lib/bootstrapcdn.js"></script>
+
+
+<!--<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>-->
+
+</html>

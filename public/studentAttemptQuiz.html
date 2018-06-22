@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Attempting Quiz</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" type="" href="BOOTSTRAP/lib/boot.css">
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" 
+    integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">-->
+    <link rel="stylesheet" type="" href="BOOTSTRAP/lib/sign-in.css">
+
+    <script src="https://www.gstatic.com/firebasejs/4.5.2/firebase.js"></script>
+
+
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyBFuJjAovnV3Tm5uTwUDAwnd9ZH7RkO5mY",
+            authDomain: "saylani-firebase.firebaseapp.com",
+            databaseURL: "https://saylani-firebase.firebaseio.com",
+            projectId: "saylani-firebase",
+            storageBucket: "saylani-firebase.appspot.com",
+            messagingSenderId: "997850868113"
+        };
+        firebase.initializeApp(config);
+    </script>
+
+</head>
+
+<body >
+
+       <!-- HEADER -->
+       <div class="row" id="header">
+            <div id="logo" class="col-sm-4">
+                <h1>Quizone</h1>
+            </div>
+    
+            <div class="col-sm-4"></div>
+            <div class="col-sm-4">
+                <button class="btn btn-outline-danger logout-btn">Logout</button>
+            </div>
+        </div>
+
+        <!-- Timer -->
+        <div class="col-sm-4">
+              <div style="color: white; display: none" class="timer" id="timer">  </div>
+
+        </div>
+    </div>
+
+
+<!-- List -->
+    <div class="row" id="renderList">
+        <div class="col"></div>
+        <div class="col-sm-8 quiz-container" style="overflow-y: scroll" id="quizList">
+            <h3 id="allQuizzesHead" style="display: none;">All Quizzes</h3>
+        </div>
+        <div class="col"></div>
+    </div>
+
+<!-- rendering quiz info-->
+    <div class="row" id="quizRender" style="display: none;">
+        <div class="col-sm-2"></div>
+
+        <div class="col-sm-8 quiz-container" >
+            <h1 style="text-align: center">Read Before Proceed</h1>
+            <hr>
+            <div class="row">
+                <div class="col"></div>
+                <div class="col-sm-2 instruct">
+                        <h4>Name:</h4>
+                        <h4>Marks:</h4>
+                        <h4>Total Time:</h4>
+                        <h4>Syllabus:</h4>
+                        <h4>Instructions:</h4>
+                </div>
+                <div class="col-sm-4">
+                    <h4 id="name"></h4>
+                    <h4 id="marks"></h4>
+                    <h4 id="time"></h4>
+                    <h4 id="syllabus"></h4>
+                    <h4 id="instructions"></h4>
+                </div>
+                <div class="col"></div>
+            </div>
+            <hr>
+<!-- button -->
+            <div class="row container">
+                <div class="col"></div>
+                <div class="col-sm-8" style="text-align: center">
+                    <button class="btn btn-info" onclick="proceed()">Continue</button>
+                </div>
+                <!-- <div class="col-sm-8"   style="display:none;">
+                    <button id="logOutButton" class="btn btn-info" onclick="">Logout</button>
+                </div> -->
+                <div class="col-sm-2"></div>
+            </div>
+          
+        </div>
+
+        <div class="col"></div>
+    </div>
+
+<!-- rendering quiz-->
+    <div class="row" id="quizContainer" style="display: none">
+            <div class="col"></div>
+            <div class="col-sm-8 quiz-container" id="">
+                    <div id="Question" class="question"></div>
+                    <!-- Options -->
+                    <label class="option"> <input class="options" type="radio" name="option" value="1"> <span id="Option1"></span> </label><br> <br>
+                    <label class="option"> <input class="options" type="radio" name="option" value="2"> <span id="Option2"></span> </label><br> <br>
+                    <label class="option"> <input class="options" type="radio" name="option" value="3"> <span id="Option3"></span> </label><br> <br>
+                    <label class="option"> <input class="options" type="radio" name="option" value="4"> <span id="Option4"></span> </label><br>
+                    <button id="NextButton" class=" btn btn-info" onclick="loadNextQuestion()"> Next Question </button>
+            </div>
+            <div class="col"></div>
+        </div>
+
+<!-- rendering result-->
+    <div class="row" id="resultContainer" style="display: none; text-align: center;">
+        <div class="col"></div>
+        <div class="col-sm-8 quiz-container" id="">
+            <h1 id="resultTxt"> <u>Result !</u> </h1>
+            <h1 id='timesUp' style="color: red; display: none;"> <u>Times Up!</u> </h1>
+            <hr>
+            <h3 id="result" class="container result" ></h3>
+            <h3 id="resultt" class="container result"></h3>
+            <h3 id="resulttt" class="container result" ></h3>
+            <button id="logOutButton" class="btn btn-info" onclick="goToMain()">Goto Main</button>
+        </div>
+        <div class="col"></div>
+    </div>
+
+
+
+
+    
+
+
+
+    <script src="js/studentAttemptQuiz.js"></script>
+    <!-- <script src="js/AttemptQuiz.js"></script> -->
+    <script src="BOOTSTRAP/lib/jquery.js"></script>
+    <script src="BOOTSTRAP/lib/cloudflare.js"></script>
+    <script src="BOOTSTRAP/lib/bootstrapcdn.js"></script>
+
+</body>
+
+</html>

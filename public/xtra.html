@@ -1,0 +1,38 @@
+<div class="row">
+        <div class="col-sm-4"></div>
+        <div class="col-sm-4 field-set back-allduayn container form-signin">
+            
+        </div>
+        <div class="col-sm-4"></div>
+    </div>
+
+
+
+
+    <!-- render -->
+    database.child("/quizData").on("child_added", (snap)=>{
+        var allQuizes = snap.val();
+        // allFirebase.push(allQuizes)
+        // console.log(allQuizes)
+        
+        var quizNames = []
+        for (var i in allQuizes){
+            quizNames.push(allQuizes[i].quizName)
+            console.log("a", quizNames)
+        };
+
+        // for (var key in allQuizes){
+        //     quiz.push({[key] : allQuizes[key]})
+        //     console.log("quiz", quiz)
+        // };
+
+        // console.log(quiz[0].quizName)
+    //    quiz.map((val)=>{
+    //     console.log('map',val)
+
+    //    });
+    //    location = "renderQuiz.html"
+
+
+        
+    })

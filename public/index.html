@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Quizone</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" type="" href="BOOTSTRAP/lib/boot.css">
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" 
+    integrity="sha384-/Y6pD6FV/Vv3HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">-->
+    <link rel="stylesheet" type="" href="BOOTSTRAP/lib/sign-in.css">
+
+</head>
+
+<body>
+
+    <div class="row" id="header">
+        <div id="logo" class="col-sm-4">
+            <h1>Quizone</h1>
+        </div>
+
+        <div class="col-sm-4"></div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-sm-4"></div>
+        <div class="col-sm-4 field-set back-allduayn container form-signin">
+            <img class="s-heading login-img" src="img/login.png" alt="">
+            <h3 class="form-signin-heading">Welcome</h3>
+            <p>Are you a
+                <a href="studentsLogin.html">Student</a> OR a
+                <a href="teachersLogin.html">Teacher</a> ?</p>
+        </div>
+        <div class="col-sm-4"></div>
+    </div>
+    <br>
+    <br>
+    <div class="row">
+        <div class="col-sm-4"></div>
+        <div class="col-sm-4" style="text-align: center">
+            <!-- <a class="" href="" data-toggle="modal" data-target=".bd-example-modal-lg">ADMIN PANNEL </a> -->
+            <button type="button" class="btn btn-outline-secondary" data-toggle="modal" data-target=".bd-example-modal-lg">ADMIN PANNEL</button>
+
+        </div>
+        <div class="col-sm-4"></div>
+    </div>
+
+
+
+    <!-- Large modal -->
+
+    <div style="text-align: center" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+<br>
+                <h1>Enter Organization Code:</h1>
+<hr>
+                <!-- <div class="input-group mb-3"> -->
+                    <input type="password" id="codeInput" class="form-control" placeholder="Enter code here!" ><br>
+                    <div style="text-align: center">
+                        <button  class="btn btn-outline-secondary" type="button" onclick="codeSubmit()">Submit</button>
+                    </div>
+                    <br>
+                <!-- </div> -->
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script src="js/admin.js"></script>
+    <script src="BOOTSTRAP/lib/jquery.js"></script>
+    <script src="BOOTSTRAP/lib/cloudflare.js"></script>
+    <script src="BOOTSTRAP/lib/bootstrapcdn.js"></script>
+</body>
+
+</html>

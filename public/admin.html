@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Quizone</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" type="" href="BOOTSTRAP/lib/boot.css">
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" 
+    integrity="sha384-/Y6pD6FV/Vv3HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">-->
+    <link rel="stylesheet" type="" href="BOOTSTRAP/lib/sign-in.css">
+    <script src="https://www.gstatic.com/firebasejs/4.5.2/firebase.js"></script>
+    <script>
+            // Initialize Firebase
+            var config = {
+                apiKey: "AIzaSyBFuJjAovnV3Tm5uTwUDAwnd9ZH7RkO5mY",
+                authDomain: "saylani-firebase.firebaseapp.com",
+                databaseURL: "https://saylani-firebase.firebaseio.com",
+                projectId: "saylani-firebase",
+                storageBucket: "saylani-firebase.appspot.com",
+                messagingSenderId: "997850868113"
+            };
+            firebase.initializeApp(config);
+        </script>
+</head>
+
+<body >
+    <!-- HEADER -->
+    <div class="row" id="header">
+        <div id="logo" class="col-sm-4">
+            <h1>Quizone</h1>
+        </div>
+
+        <div class="col-sm-4"></div>
+        <div class="col-sm-4">
+            <button class="btn btn-outline-danger logout-btn" onclick="location = 'index.html'">Logout</button>
+        </div>
+    </div>
+
+    <!-- BODY -->
+    <!-- <div class="row">
+        <div class="col"></div>
+        <div class="col-sm-8 back-allduayn container field-set">
+dsf
+        </div>
+        <div class="col"></div>
+    </div> -->
+
+    <div class="row" id="renderList">
+            <div class="col"></div>
+            <div class="col-sm-8 quiz-container" style="overflow-y: scroll" id="quizList">
+                <h3 id="allQuizzesHead" style="display: none;">All Quizzes</h3>
+            </div>
+            <div class="col"></div>
+        </div>
+
+    
+
+        <!-- <script src="js/myQuizzes.js"></script> -->
+
+    <script src="js/admin.js"></script>
+    <script src="BOOTSTRAP/lib/jquery.js"></script>
+    <script src="BOOTSTRAP/lib/cloudflare.js"></script>
+    <script src="BOOTSTRAP/lib/bootstrapcdn.js"></script>
+
+</body>
+
+</html>
