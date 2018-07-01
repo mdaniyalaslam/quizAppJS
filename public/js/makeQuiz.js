@@ -125,13 +125,15 @@ function save() {
     var allQuestions = localData
 
     database.child("quizData").child(teacherId).child(quizInfo.quizName).set(quizInfo)
+    database.child("quizData").child(teacherId).child(quizInfo.quizName).child('questions').set(allQuestions);
+    
     database.child("quizData").child("allQuizzes").child(quizInfo.quizName).set(quizInfo)
+    database.child("quizData").child("allQuizzes").child(quizInfo.quizName).child('questions').set(allQuestions);
+
     // .then((snap)=>{
         
         // quizKey = snap.key
         // database.child("quizData").child(teacherId).child(quizKey).update({key:quizKey})
-        database.child("quizData").child(teacherId).child(quizInfo.quizName).child('questions').set(allQuestions);
-        database.child("quizData").child("allQuizzes").child(quizInfo.quizName).child('questions').set(allQuestions);
 
         localStorage.removeItem("quizTempData");
         location = "teachersPannel.html"
