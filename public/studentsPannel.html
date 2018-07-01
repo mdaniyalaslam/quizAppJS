@@ -43,18 +43,43 @@
               <button class="btn btn-outline-danger logout-btn" onclick="location = 'index.html'">Logout</button>
           </div>
       </div> -->
-      <nav id="header" class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <!-- <div class="row"> -->
+
+        <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
           <a class="navbar-brand" href="#">Quizone</a>
-          <button  class="btn btn-outline-danger logout-btn" type="submit">Logout</button>
-      </nav>
+          <button  class="btn btn-outline-danger" type="submit">Logout</button>
+        </nav> -->
+      <!-- </div> -->
+
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+          <a style="color:white;" class="navbar-brand" href="#">Quizone</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+            </ul>
+              <button class="btn btn-outline-success my-2 my-sm-0"  onclick="location = 'index.html'" >Logout</button>
+          </div>
+        </nav>
 
 
 
 <br>
   <div class="row">
     <div class="col-sm-4"></div>
-    <div class="col-sm-4 field-set back-allduayn container form-signin">
-      <img class="s-heading login-img" src="img/login.png" alt="">
+    <div class="col-sm-4 field-set container form-signin">
+      
+      <div class="row">
+        <div class="col-sm-2"></div>
+        <div style="text-align: center" class="col-sm-8">
+
+          <img class="s-heading login-img" src="img/login.png" alt="">
+        </div>
+        <div class="col-sm-2"></div>
+
+      </div>
       <!-- <form id="stop">           -->
       <h3 id="studentsGreeting" class="form-signin-heading"></h3>
 

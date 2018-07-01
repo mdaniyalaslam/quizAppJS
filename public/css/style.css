@@ -79,7 +79,8 @@ h1{
 } 
 
 .btn{
-     width: 215px; 
+ /* float: right; */
+    /* width: 215px;  */
 }
 
 div .login-fields{
@@ -95,7 +96,8 @@ div .login-fields{
 
 .login-img{
     height: 150px;
-    margin: 0 0 0 70px;
+    width: 150px;
+    /* margin: 0 0 0 70px;d */
 }
 
 .quiz-container{
